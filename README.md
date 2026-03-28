@@ -1,4 +1,4 @@
-# getpairs.py
+# scanner.py
 
 > Designed for fast futures screening of low-margin KuCoin contracts to identify RSI extremes before manual trade entry.
 
@@ -128,7 +128,7 @@ If TA-Lib is not installed the script falls back to the built-in NumPy implement
 ## Usage
 
 ```
-python getpairs.py [rsi] [timeframe] [lot_limit] [db] [options]
+python scanner.py [rsi] [timeframe] [lot_limit] [db] [options]
 ```
 
 ### Positional arguments
@@ -153,13 +153,13 @@ python getpairs.py [rsi] [timeframe] [lot_limit] [db] [options]
 
 ```bash
 # Run with all defaults (RSI 24, 1h candles, lot <= 0.03 USDT at 10x leverage)
-python getpairs.py
+python scanner.py
 
 # 15-minute candles, RSI period 14, lot limit 0.05 USDT
-python getpairs.py 14 15m 0.05
+python scanner.py 14 15m 0.05
 
 # Custom database, 20x leverage, verbose error output
-python getpairs.py 24 1h 0.03 my_data.db --leverage 20 --verbose
+python scanner.py 24 1h 0.03 my_data.db --leverage 20 --verbose
 ```
 
 ---
