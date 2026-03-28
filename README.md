@@ -38,7 +38,7 @@ A command-line tool that scans all **KuCoin Futures** markets, filters them by t
 
 ```bash
 git clone https://github.com/goodgamefinder/kucoinrsiscan/
-cd getpairs
+cd kucoinrsiscan
 ```
 
 ### 2. Create and activate a virtual environment (recommended)
@@ -84,7 +84,7 @@ If TA-Lib is not installed, the script falls back to the built-in NumPy implemen
 ## Usage
 
 ```
-python getpairs.py [rsi] [timeframe] [lot_limit] [db] [options]
+python scanner.py [rsi] [timeframe] [lot_limit] [db] [options]
 ```
 
 ### Positional arguments
@@ -109,17 +109,17 @@ python getpairs.py [rsi] [timeframe] [lot_limit] [db] [options]
 
 **Run with all defaults** (RSI 24, 1h candles, lot ≤ 0.03 USDT at 10× leverage):
 ```bash
-python getpairs.py
+python scanner.py
 ```
 
 **15-minute candles, RSI period 14, lot limit 0.05 USDT**:
 ```bash
-python getpairs.py 14 15m 0.05
+python scanner.py 14 15m 0.05
 ```
 
 **Custom database file, 20× leverage, verbose output**:
 ```bash
-python getpairs.py 24 1h 0.03 my_data.db --leverage 20 --verbose
+python scanner.py 24 1h 0.03 my_data.db --leverage 20 --verbose
 ```
 
 ---
