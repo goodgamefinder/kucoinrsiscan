@@ -1,0 +1,7 @@
+ccxt
+numpy
+colorama
+
+# Optional: install TA-Lib for faster RSI calculation.
+# Requires the C library to be installed first — see README for platform-specific instructions.
+# TA-Lib
